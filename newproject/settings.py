@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-%to5ql2!s0ni-3c%8au4bposj&_vl$-#3eyfg8jknr2u-jp9^y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'TravelloDB',
         'USER': 'postgres',
         'PASSWORD': '1234',
-        'HOST': 'localhost'
+        'HOST': '192.168.1.15'
     }
 }
 
@@ -120,9 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
